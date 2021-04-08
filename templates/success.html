@@ -1,0 +1,30 @@
+<html>
+   <head>
+      <script type = "text/javascript" 
+         src = "{{ url_for('static', filename = 'login.js') }}" >
+      </script>
+   </head>
+   <body>
+      Welcome {{name}}    
+
+      <br />
+      <br />
+
+      <table border="1">
+         {% for k,v in dict.items() %}
+            <tr>
+               <th>{{k}}</th>
+               <th>{{v}}</th>
+            </tr>
+         {% endfor %}
+      </table>
+      <br />
+      <br />
+      <input type="button" value="Hit me" onclick="sayHello()"
+      <br />
+      <br />
+      {% if name == 'srm' %}
+      <a href="/login">Go Back</a>
+      {% endif %}
+   </body>
+</html>
