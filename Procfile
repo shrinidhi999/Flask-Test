@@ -1,1 +1,1 @@
-web: gunicorn Session:app
+web: gunicorn SqlAlchemy:app
